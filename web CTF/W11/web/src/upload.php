@@ -12,7 +12,7 @@ else{
 move_uploaded_file($_FILES["file"]["tmp_name"],"upload/".$_FILES["file"]["name"]);
 }
 header('Location:'."upload/".$_FILES["file"]["name"]);
-echo $result
+echo $result;
 exit;
 }
 ?>
