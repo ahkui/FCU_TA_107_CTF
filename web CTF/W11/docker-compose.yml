@@ -6,6 +6,8 @@ services:
             - "10011:80"
         volumes:
             - ./web/src:/var/www/html/
+        entrypoint:
+            - chmod -R 777 /var/www/html/upload/
 volumes:
     persistent:
 networks:
