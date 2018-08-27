@@ -49,7 +49,7 @@
 <body>
     <div class="container" id="main">
         <h1 class="text-center">
-            <?php echo $text;?>
+            <?php echo $result;?>
         </h1>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
