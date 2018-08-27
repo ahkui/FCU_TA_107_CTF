@@ -12,10 +12,10 @@
 
     }
     $result = "";
-    $ip = getIp()
-    if  ($ip == "127.0.0.1"){
+    $ip = getIp();
+    if ($ip == "127.0.0.1"){
       $result = "CTF{are_you_reary_at_127.0.0.1?}";
-    } else{
+    } else {
       $result = "Your ip is ".$ip." Not from localhost";
     }
 
