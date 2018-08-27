@@ -7,8 +7,6 @@ services:
         volumes:
             - ./web/src:/var/www/html/
             - ./web/src/upload:/var/www/html/upload/
-        entrypoint:
-            - chmod -R 777 /var/www/html/upload/
 volumes:
     persistent:
 networks:
