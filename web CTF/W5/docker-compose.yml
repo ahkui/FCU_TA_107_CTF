@@ -6,6 +6,7 @@ services:
             - "10005:80"
         volumes:
             - ./server:/var/www/html/
+            - ./server/git:/var/www/html/.git/
 volumes:
     persistent:
 networks:
