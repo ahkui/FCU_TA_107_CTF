@@ -2,8 +2,8 @@ version: "2"
 services:
     web:
         image: php:7-apache
-        ports: 
-            - "10005:80"
+        ports:
+            - "10101:80"
         volumes:
             - ./server:/var/www/html/
 volumes:
@@ -14,4 +14,4 @@ networks:
         ipam:
             driver: default
             config:
-                - subnet:  172.27.5.0/24
+                - subnet:  172.27.100.0/24
