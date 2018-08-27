@@ -1,3 +1,3 @@
 FROM php:7.0-apache
-
-RUN chmod -R /var/www/html/upload
+#RUN ls /var/www/html/
+#RUN chmod -R 777 /var/www/html/upload/
