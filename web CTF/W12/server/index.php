@@ -90,7 +90,7 @@
 </head>
 <body>
     <div class="container" id="main">
-        <h1 class="h3 mb-3 font-weight-normal"><?php echo $h1; ?></h1>
+        <h1 class="h3 mb-3 font-weight-normal text-center"><?php echo $h1; ?></h1>
         <form class="form-signin text-center" method="POST" action="index.php">
             <img class="mb-4" src="https://ctf.vongola.pw/img/logo.png" alt="" height="72">
             <label for="password" class="sr-only">Password</label>
