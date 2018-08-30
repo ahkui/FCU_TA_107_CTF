@@ -73,7 +73,7 @@
 
         ?>
         <br>
-        Here's my DataBase
+        Here's Your DataBase
     </h1>
     <table class="table table-bordered">
       <?php
@@ -87,7 +87,7 @@
           <tr>
         <?php
         for($i = 0 ;$i<$count1 ; $i++) {
-          echo "<th>".$i."</th>";
+          echo "<th>".$i+1."</th>";
         }
         ?>
       </tr>
