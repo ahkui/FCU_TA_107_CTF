@@ -95,7 +95,7 @@
 <body>
     <div class="container" id="main">
         <h1 class="h3 mb-3 font-weight-normal text-center"><?php echo $h1; ?></h1>
-        <h1 class="text-center"><?php echo $result; ?></h1>
+        <h1 class="text-center" name="flag"><?php echo $result; ?></h1>
         <h1 class="h3 mb-3 font-weight-normal text-center">你可能登入了<?php echo $count-1; ?>次</h1>
         <form class="form-signin text-center" method="POST" action="index.php">
             <label for="password" class="sr-only">Password</label>
