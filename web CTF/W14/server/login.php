@@ -65,7 +65,7 @@
     <h1 class="text-center">
         <?php
             $text = "";
-            $success ? $text = "Login Success!<br>Here's Your DataBase" : $text = "Login Failed!!";
+            $success ? $text = "Login Success!<br>Here's Your Account Data" : $text = "Login Failed!!";
             echo $text;
             if ($error_msg){
               echo $error_msg ;
@@ -77,11 +77,9 @@
     <table class="table table-bordered">
         <thead>
           <tr>
-        <?php
-        for($i = 1 ;$i<4 ; $i++) {
-          echo "<th>".$i."</th>";
-        }
-        ?>
+            <th>id</th>
+            <th>username</th>
+            <th>password</th>
       </tr>
         </thead>
 
