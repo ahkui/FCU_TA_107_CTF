@@ -1,7 +1,7 @@
 <?php
   session_start();
   $result = "CTF{NOT_THIS_ONE}";
-  $h1 = "Please sign in more time :)";
+  $h1 = "Please sign in more time :)<br> and I will Give you the Flag (Maybe?";
   function RandomString($length = 20) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
