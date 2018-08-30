@@ -21,7 +21,7 @@
       $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
-
+      $success = count($stmt->fetchAll()) > 0;
       $dbh = null;
     } catch(PDOException $e) {
         $error_msg =  "Connection failed: ".$e->getMessage();
@@ -75,9 +75,11 @@
         <br>
         Here's my DataBase
     </h1>
-    <table>
-      <?php foreach($stmt as $value) {
-              echo $value;
+    <table class="table table-bordered">
+      <?php
+      $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
+      $stmt = $pdo->query($sql);
+      foreach($stmt as $value) {
               $count1 = count($value);
               echo "<br/>";
             } ?>
