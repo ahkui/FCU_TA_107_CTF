@@ -91,6 +91,7 @@
 <body>
     <div class="container" id="main">
         <h1 class="h3 mb-3 font-weight-normal text-center"><?php echo $h1; ?></h1>
+        <h1 class="text-center"><?php echo $result; ?></h1>
         <form class="form-signin text-center" method="POST" action="index.php">
             <img class="mb-4" src="https://ctf.vongola.pw/img/logo.png" alt="" height="72">
             <label for="password" class="sr-only">Password</label>
@@ -100,7 +101,7 @@
 
         </form>
 
-        <h1 class="text-center"><?php echo $result; ?></h1>
+
         <p class="mt-5 mb-3 text-center">© 2017-2018</p>
     </div>
 
