@@ -22,7 +22,11 @@
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
       foreach($stmt as $key => $value) {
-        echo $key . "-" . $value . "<br/>";
+        echo $key
+        foreach ($value as $value1){
+          echo $value1;
+        }
+        echo "<br/>";
       }
 $dbh = null;
     } catch(PDOException $e) {
