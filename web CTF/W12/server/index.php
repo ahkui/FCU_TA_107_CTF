@@ -22,12 +22,13 @@
       $result = "CTF{YOu_Know_how_to_wirte_requests_Script}";
     }
   }
-  $count = $_SESSION["suc_count"];
+
   if( isset($_POST['token']) ||  $_POST['token']!="") {
     if ($_SESSION["nextoken"] == $_POST['token']) {
       $_SESSION["suc_count"] += 1;
     }
   }
+  $count = $_SESSION["suc_count"];
   $_SESSION["nextoken"] = RandomString();
 
 ?>
@@ -95,7 +96,7 @@
     <div class="container" id="main">
         <h1 class="h3 mb-3 font-weight-normal text-center"><?php echo $h1; ?></h1>
         <h1 class="text-center"><?php echo $result; ?></h1>
-        <h1 class="h3 mb-3 font-weight-normal text-center">你可能登入了<?php echo $count; ?>次</h1>
+        <h1 class="h3 mb-3 font-weight-normal text-center">你可能登入了<?php echo $count-1; ?>次</h1>
         <form class="form-signin text-center" method="POST" action="index.php">
             <label for="password" class="sr-only">Password</label>
             <input id="password" class="form-control" placeholder="Password" value="<?php echo  $_SESSION["nextoken"]?>" type="text" name="token">
