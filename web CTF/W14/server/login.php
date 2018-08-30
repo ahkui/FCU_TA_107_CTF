@@ -81,7 +81,7 @@
         <thead>
           <tr>
         <?php
-        for(int i = 0 ;i<$count1 ; i++) {
+        for($i = 0 ;$i<$count1 ; $i++) {
           echo "<th>".i."</th>";
         }
         ?>
