@@ -86,8 +86,8 @@
         <thead>
           <tr>
         <?php
-        for($i = 0 ;$i<$count1 ; $i++) {
-          echo "<th>".$i+1."</th>";
+        for($i = 1 ;$i<$count1+1 ; $i++) {
+          echo "<th>".$i."</th>";
         }
         ?>
       </tr>
