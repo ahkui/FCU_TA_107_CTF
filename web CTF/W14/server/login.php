@@ -22,7 +22,7 @@
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
       foreach($stmt as $key => $value) {
-        echo $key
+        echo $key;
         foreach ($value as $value1){
           echo $value1;
         }
