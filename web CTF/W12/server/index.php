@@ -102,7 +102,6 @@
             <input id="password" class="form-control" placeholder="Password" value="<?php echo  $_SESSION["nextoken"]?>" type="text" name="token">
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             <p class="mt-5 mb-3 text-center">© 2017-2018</p>
-
         </form>
 
 
