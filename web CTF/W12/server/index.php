@@ -1,37 +1,39 @@
 <?php
   session_start();
-  $result = ""
-  function RandomString()
-  {
-      $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      $randstring = '';
-      for ($i = 0; $i < 20; $i++) {
-          $randstring = $characters[rand(0, strlen($characters))];
-      }
-      return $randstring;
+  $result = "CTF{NOT_THIS_ONE}";
+  $h1 = "Please sign in more time :)";
+  function RandomString($length = 20) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
   }
   if (empty($_SESSION["suc_count"])) {
-      $_SESSION["suc_count"] = 0
+      $_SESSION["suc_count"] = 0;
+      $h1 = "Please sign in";
+      $result = "";
 
   } else {
     if ($_SESSION["suc_count"]==10){
-      $result = "CTF{YOu_Know_how_to_wirte_requests_Script}"
+      $result = "CTF{YOu_Know_how_to_wirte_requests_Script}";
     }
   }
   if( isset($_POST['token']) ||  $_POST['token']!="") {
     if ($_SESSION["nextoken"] == $_POST['token']) {
-      $_SESSION["suc_count"] += 1
+      $_SESSION["suc_count"] += 1;
     }
   }
   $_SESSION["nextoken"] = RandomString();
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Web 9: SHA 1</title>
+    <title>Web 12: try write script</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <style>
@@ -90,10 +92,11 @@
     <div class="container" id="main">
         <form class="form-signin text-center" method="POST" action="index.php">
             <img class="mb-4" src="https://ctf.vongola.pw/img/logo.png" alt="" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 font-weight-normal"><?php echo $h1; ?></h1>
             <label for="password" class="sr-only">Password</label>
-            <input id="password" class="form-control" placeholder="Password" value="<?php echo  $_SESSION["nextoken"]?>>" type="password" name="token">
+            <input id="password" class="form-control" placeholder="Password" value="<?php echo  $_SESSION["nextoken"]?>" type="text" name="token">
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
             <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
         </form>
 
