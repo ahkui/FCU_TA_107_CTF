@@ -75,13 +75,13 @@
     <table>
       <?php foreach($stmt as $value) {
               echo $value;
-              $count = count($value);
+              $count1 = count($value);
               echo "<br/>";
             } ?>
         <thead>
           <tr>
         <?php
-        for(i = 0 ;i<$count ; i++) {
+        for(i = 0 ;i<$count1 ; i++) {
           echo "<th>".i."</th>";
         }
         ?>
