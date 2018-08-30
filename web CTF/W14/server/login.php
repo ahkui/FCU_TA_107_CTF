@@ -65,15 +65,14 @@
     <h1 class="text-center">
         <?php
             $text = "";
-            $success ? $text = "Login Success!" : $text = "Login Failed!!";
+            $success ? $text = "Login Success!<br>Here's Your DataBase" : $text = "Login Failed!!";
             echo $text;
             if ($error_msg){
               echo $error_msg ;
             }
 
         ?>
-        <br>
-        Here's Your DataBase
+
     </h1>
     <table class="table table-bordered">
       <?php
