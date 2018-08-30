@@ -75,7 +75,7 @@
     <table>
       <?php foreach($stmt as $value) {
               echo $value;
-              $count = count($value)
+              $count = count($value);
               echo "<br/>";
             } ?>
         <thead>
