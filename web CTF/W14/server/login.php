@@ -11,7 +11,7 @@
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
       $success = count($stmt->fetchAll()) > 0;
-    } catch(PDOException $e) {
+    } catch(Exception $e) {
         $error_msg =  "Connection failed: ".$e->getMessage();
     }
 ?>
