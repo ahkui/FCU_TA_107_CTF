@@ -59,6 +59,9 @@
 </head>
 <body>
     <div class="container">
+      <?php if($success === false): ?>
+      <div class="alert alert-danger">debug:<br> <?=htmlentities($sql)?></div>
+      <?php endif; ?>
     <h1 class="text-center">
         <?php
             $text = "";
@@ -82,14 +85,16 @@
           <tr>
         <?php
         for($i = 0 ;$i<$count1 ; $i++) {
-          echo "<th>".i."</th>";
+          echo "<th>".$i."</th>";
         }
         ?>
       </tr>
         </thead>
 
         <tbody>
-          <?php foreach($stmt as $value) {
+          <?php
+          $stmt = $pdo->query($sql); 
+          foreach($stmt as $value) {
             echo "<tr>";
                   foreach ($value as $value1){
                     echo "<td>".$value1."</td>";
