@@ -21,43 +21,13 @@
       $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
-      foreach($stmt as $key => $value) {
-        echo $key;
-        foreach ($value as $value1){
-          echo $value1."<br>";
-        }
-        echo "<br/>";
-      }
-$dbh = null;
+
+      $dbh = null;
     } catch(PDOException $e) {
         $error_msg =  "Connection failed: ".$e->getMessage();
     }
 ?>
-<php
-    if($_POST[user] && $_POST[pass]) {
-        $conn = mysql_connect("********", "*****", "********");
-        mysql_select_db("phpformysql") or die("Could not select database");
-     if ($conn->connect_error) {
-            die("Connection failed: " . mysql_error($conn));
-    }
-    $user = $_POST[user];
-    $pass = md5($_POST[pass]);
-    $sql = "select pw from php where user='$user'";
-    $query = mysql_query($sql);
-    if (!$query) {
-        printf("Error: %s\n", mysql_error($conn));
-     exit();
-    }
-    $row = mysql_fetch_array($query, MYSQL_ASSOC);
-    //echo $row["pw"];
-     if (($row[pw]) && (!strcasecmp($pass, $row[pw]))) {
-        echo "<p>Logged in! Key:************** </p>";
-    }
-    else {
-        echo("<p>Log in failure!</p>");
-      }
-    }
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,9 +67,41 @@ $dbh = null;
             if ($error_msg){
               echo $error_msg ;
             }
-        ?>
-    </h1>
 
+        ?>
+        <br>
+        Here's my DataBase
+    </h1>
+    <table>
+      <?php foreach($stmt as $value) {
+              echo $value;
+              foreach ($value as $value1){
+                echo $value1."<br>";
+              }
+              echo "<br/>";
+            } ?>
+        <thead>
+          <tr>
+        <?php
+        foreach($stmt[0] as $value1) {
+          echo "<th>".$value."</th>";
+        }
+        ?>
+      </tr>
+        </thead>
+
+        <tbody>
+          <?php foreach($stmt as $value) {
+            echo "<tr>";
+                  foreach ($value as $value1){
+                    echo "<td>".$value1."</td>";
+                  }
+                  echo "</tr>";
+                }
+                 ?>
+        </tbody>
+
+    </table>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
