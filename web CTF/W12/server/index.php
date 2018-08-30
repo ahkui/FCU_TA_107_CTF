@@ -17,7 +17,7 @@
       $result = "";
 
   } else {
-    if ($_SESSION["suc_count"]==10){
+    if ($_SESSION["suc_count"]==2018){
       $result = "CTF{YOu_Know_how_to_wirte_requests_Script}";
     }
   }
