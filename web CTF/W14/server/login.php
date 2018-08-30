@@ -93,7 +93,8 @@
 
         <tbody>
           <?php
-          $stmt = $pdo->query($sql); 
+          $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
+          $stmt = $pdo->query($sql);
           foreach($stmt as $value) {
             echo "<tr>";
                   foreach ($value as $value1){
