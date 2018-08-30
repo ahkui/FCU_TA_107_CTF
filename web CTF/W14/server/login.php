@@ -24,7 +24,7 @@
       foreach($stmt as $key => $value) {
         echo $key;
         foreach ($value as $value1){
-          echo $value1;
+          echo $value1."<br>";
         }
         echo "<br/>";
       }
