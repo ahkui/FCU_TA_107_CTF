@@ -1,3 +1,3 @@
 <?php
-    $flag = "flag{google_crack_sha1}";
+    $flag = "CTF{google_crack_sha1}";
 ?>
