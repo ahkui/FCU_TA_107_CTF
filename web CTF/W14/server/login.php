@@ -75,17 +75,10 @@
 
     </h1>
     <table class="table table-bordered">
-      <?php
-      $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
-      $stmt = $pdo->query($sql);
-      foreach($stmt as $value) {
-              $count1 = count($value);
-              echo "<br/>";
-            } ?>
         <thead>
           <tr>
         <?php
-        for($i = 1 ;$i<$count1+1 ; $i++) {
+        for($i = 1 ;$i<4 ; $i++) {
           echo "<th>".$i."</th>";
         }
         ?>
@@ -96,10 +89,15 @@
           <?php
           $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
           $stmt = $pdo->query($sql);
+          $count = 0;
           foreach($stmt as $value) {
             echo "<tr>";
+            $count = 0;
                   foreach ($value as $value1){
-                    echo "<td>".$value1."</td>";
+                    if ($count%2 == 0){
+                      echo "<td>".$value1."</td>";
+                    }
+                    $count +=1;
                   }
                   echo "</tr>";
                 }
