@@ -93,7 +93,6 @@
         <h1 class="h3 mb-3 font-weight-normal text-center"><?php echo $h1; ?></h1>
         <h1 class="text-center"><?php echo $result; ?></h1>
         <form class="form-signin text-center" method="POST" action="index.php">
-            <img class="mb-4" src="https://ctf.vongola.pw/img/logo.png" alt="" height="72">
             <label for="password" class="sr-only">Password</label>
             <input id="password" class="form-control" placeholder="Password" value="<?php echo  $_SESSION["nextoken"]?>" type="text" name="token">
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
