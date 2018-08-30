@@ -75,16 +75,14 @@
     <table>
       <?php foreach($stmt as $value) {
               echo $value;
-              foreach ($value as $value1){
-                echo $value1."<br>";
-              }
+              $count = count($value)
               echo "<br/>";
             } ?>
         <thead>
           <tr>
         <?php
-        foreach($stmt[0] as $value1) {
-          echo "<th>".$value."</th>";
+        for(i = 0 ;i<$count ; i++) {
+          echo "<th>".i."</th>";
         }
         ?>
       </tr>
