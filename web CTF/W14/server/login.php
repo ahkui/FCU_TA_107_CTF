@@ -21,7 +21,7 @@
       $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
-      foreach($result as $key => $value) {
+      foreach($stmt as $key => $value) {
         echo $key . "-" . $value . "<br/>";
       }
 $dbh = null;
