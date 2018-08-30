@@ -2,7 +2,18 @@
     if( !isset($_POST['username']) || !isset($_POST['password']) || $_POST['username']=="" || $_POST['password']=="" ){
         header("Location: index.php");
     }
-    $username = $_POST['username'];
+    function safe_filter($str)
+    {
+        $strl = strtolower($str);
+        if (strstr($strl, 'drop') ||
+            strstr($strl, 'update') ||
+            strstr($strl, 'delete')
+        ) {
+            return '';
+        }
+        return $str;
+    }
+    $username = safe_filter($_POST['username']);
     $password = sha1($_POST['password']);
     $error_msg = "";
     require_once('config.php');
@@ -10,8 +21,11 @@
       $pdo = new PDO("mysql:host=$db_server;dbname=$db_name;charset=utf8mb4",$db_user,$db_password);
       $sql = "SELECT * FROM `users` WHERE `username` = '$username' and `password` = '$password';";
       $stmt = $pdo->query($sql);
-      $success = count($stmt->fetchAll()) > 0;
-    } catch(Exception $e) {
+      foreach($result as $key => $value) {
+        echo $key . "-" . $value . "<br/>";
+      }
+$dbh = null;
+    } catch(PDOException $e) {
         $error_msg =  "Connection failed: ".$e->getMessage();
     }
 ?>
