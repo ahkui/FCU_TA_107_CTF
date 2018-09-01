@@ -9,9 +9,10 @@
     function is_correct($password) {
         $result = false;
         extract($_GET);
-        # sha1($real_password) === 9de64900e39e30294a5022e39b050c7d39f566ac $pass = "9de64900e39e30294a5022e39b050c7d39f566ac";
+        # sha1($real_password) === 9de64900e39e30294a5022e39b050c7d39f566ac
+        $pass = "9de64900e39e30294a5022e39b050c7d39f566ac";
         $password = hash('sha1', $password);
-        if ( $key === $pass ) {
+        if ( $password === $pass ) {
           $result = true;
         }
 
@@ -86,8 +87,6 @@
     ?>
         <form class="form-signin text-center" method="GET" action="index.php">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <label for="username" class="sr-only">Username</label>
-            <input id="username" class="form-control" placeholder="Username" required="" autofocus="" type="text" name="username">
             <label for="password" class="sr-only">Password</label>
             <input id="password" class="form-control" placeholder="Password" required="" type="password" name="password">
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
