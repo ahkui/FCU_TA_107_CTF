@@ -8,9 +8,9 @@
 
     function is_correct($password) {
         $result = false;
-        extract($_GET);
         # sha1($real_password) === 9de64900e39e30294a5022e39b050c7d39f566ac
         $pass = "9de64900e39e30294a5022e39b050c7d39f566ac";
+        extract($_GET);
         $password = hash('sha1', $password);
         if ( $password === $pass ) {
           $result = true;
