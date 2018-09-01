@@ -2,8 +2,8 @@ version: "2"
 services:
     web:
         build: ./web
-        ports: 
-            - "10014:80"
+        ports:
+            - "10015:80"
         volumes:
             - ./server:/var/www/html/
         links:
@@ -24,4 +24,4 @@ networks:
         ipam:
             driver: default
             config:
-                - subnet:  172.27.14.0/24
+                - subnet:  172.27.15.0/24
