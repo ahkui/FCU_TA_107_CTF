@@ -61,6 +61,7 @@
 <body>
     <div class="container" id="main">
     <form class="form-signin text-center" method="POST" action="login.php">
+            <img class="mb-4" src="https://ctf.vongola.pw/img/logo.png" alt="" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="username" class="sr-only">Username</label>
             <input id="username" class="form-control" placeholder="Username" required="" autofocus="" type="text" name="username">
@@ -72,6 +73,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>    
 </body>
 </html>
