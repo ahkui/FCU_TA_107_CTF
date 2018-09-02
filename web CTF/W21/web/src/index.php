@@ -26,7 +26,7 @@ Apple specific options (to be specified before mcast-group or host like all opti
 		";
 
 	}
-        return shell_exec("sh /root/ping.sh ".$command);
+        return shell_exec("sh /var/www/html/ping.sh ".$command);
 
     }
 

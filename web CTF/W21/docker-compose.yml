@@ -6,7 +6,6 @@ services:
             - "10021:80"
         volumes:
             - ./web/src:/var/www/html/
-            - ./web/sh:/root/
 volumes:
     persistent:
 networks:
