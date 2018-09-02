@@ -32,7 +32,7 @@ $user = null;
 if(!empty($_POST['username']) && !empty($_POST['password'])) {
     $connection_string = sprintf('mysql:host=%s;dbname=%s;charset=utf8mb4', $DB_HOST, $DB_NAME);
     $db = new PDO($connection_string, $DB_USER, $DB_PASS);
-    $sql = sprintf("SELECT * FROM `user` WHERE `username` = '%s' AND `password` = '%s'",
+    $sql = sprintf("SELECT * FROM `users` WHERE `username` = '%s' AND `password` = '%s'",
         $_POST['username'],
         $_POST['password']
     );
@@ -107,4 +107,3 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     </div>
 </body>
 </html>
-
