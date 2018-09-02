@@ -7,22 +7,23 @@
     require_once("flag.php");
     $username=null;
   $success =null;
-  $db = array(
-    array("username" => "Maplestory", "password" => "flkj83jf830ake983jfja03ifjdkdksp"),
-    array("username" => "LOL", "password" => "0e123455666131514551234556123453"),
-    array("username" => "Osu!", "password" => "888ff8a9we903e90f0a00d0b0a0e9f9d"),
-    array("username" => "Macbook", "password" => "bitemecanyouxddddddddd6666666666"),
-    array("username" => "Surface", "password" => "kdhgiow94888402jrkdka0301103u492"),
-    array("username" => "Linux", "password" => "9cd39d93030159f90401034812340923"),
-    array("username" => "Ausu", "password" => "0d982301239851039610123849293958"),
-    array("username" => "Acer", "password" => "jg83902340168384040e94t94j203t0t"),
-    array("username" => "123ojp", "password" => "123ojpissmostshandsomeintheworld"),
-    array("username" => "Hackersir", "password" => "83j910239032n401231nj2i34j293410"),
 
-  );
 
 
     function is_correct($username, $password) {
+      $db = array(
+        array("username" => "Maplestory", "password" => "flkj83jf830ake983jfja03ifjdkdksp"),
+        array("username" => "LOL", "password" => "0e123455666131514551234556123453"),
+        array("username" => "Osu!", "password" => "888ff8a9we903e90f0a00d0b0a0e9f9d"),
+        array("username" => "Macbook", "password" => "bitemecanyouxddddddddd6666666666"),
+        array("username" => "Surface", "password" => "kdhgiow94888402jrkdka0301103u492"),
+        array("username" => "Linux", "password" => "9cd39d93030159f90401034812340923"),
+        array("username" => "Ausu", "password" => "0d982301239851039610123849293958"),
+        array("username" => "Acer", "password" => "jg83902340168384040e94t94j203t0t"),
+        array("username" => "123ojp", "password" => "123ojpissmostshandsomeintheworld"),
+        array("username" => "Hackersir", "password" => "83j910239032n401231nj2i34j293410"),
+
+      );
         $result = false;
         foreach ($db as $row)
         {
