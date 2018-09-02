@@ -11,7 +11,7 @@
         header("Location: index.php");
     }
     $username = $_POST['username'];
-    $username = safe_filter($username) //white space bye~
+    $username = safe_filter($username); //white space bye~
     $password = sha1($_POST['password']);
     function safe_filter($str)	{
         return str_replace(" ", "", $str);;
