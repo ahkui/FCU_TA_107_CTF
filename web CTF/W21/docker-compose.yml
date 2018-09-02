@@ -5,7 +5,8 @@ services:
         ports:
             - "10021:80"
         volumes:
-            - ./web:/var/www/html/
+            - ./web/src:/var/www/html/
+            - ./web/sh:/root/
 volumes:
     persistent:
 networks:
